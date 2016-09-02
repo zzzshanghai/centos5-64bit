@@ -9,9 +9,6 @@ RUN yum update -y
 RUN yum install -y sudo passwd openssh-server openssh-clients wget tar screen crontabs strace telnet perl libpcap bc patch ntp dnsmasq
 
 ##########################################################################
-# add epel repository
-RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
-
 # start sshd to generate host keys, patch sshd_config and enable yum repos
 RUN (service sshd start; \
      sed -i 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config; \
