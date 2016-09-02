@@ -2,7 +2,7 @@ FROM centos:5.11
 
 ##########################################################################
 ### update glibc-common for locale files
-RUN yum update -y glibc-common
+RUN yum update -y
 
 ##########################################################################
 # all yum installations here
@@ -10,7 +10,7 @@ RUN yum install -y sudo passwd openssh-server openssh-clients wget tar screen cr
 
 ##########################################################################
 # add epel repository
-RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm
 
 # start sshd to generate host keys, patch sshd_config and enable yum repos
 RUN (service sshd start; \
