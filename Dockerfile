@@ -1,5 +1,7 @@
 FROM centos:5.11
 
+MAINTAINER zzzshanghai
+
 ##########################################################################
 # all yum updates here
 RUN yum update -y
