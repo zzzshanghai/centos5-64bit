@@ -6,11 +6,11 @@ RUN yum update -y glibc-common
 
 ##########################################################################
 # all yum installations here
-RUN yum install -y sudo passwd openssh-server openssh-clients wget
+RUN yum install -y sudo passwd openssh-server openssh-clients wget tar screen crontabs strace telnet perl libpcap bc patch ntp dnsmasq
 
 ##########################################################################
 # add epel repository
-RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-5.noarch.rpm
+RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
 
 # start sshd to generate host keys, patch sshd_config and enable yum repos
 RUN (service sshd start; \
