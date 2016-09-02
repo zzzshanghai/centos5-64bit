@@ -1,2 +1,2 @@
 # centos
-centos6-32bit
+centos5-64bit
