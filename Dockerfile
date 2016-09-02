@@ -6,7 +6,7 @@ RUN yum update -y glibc-common
 
 ##########################################################################
 # all yum installations here
-RUN yum install -y sudo passwd openssh-server openssh-clients tar
+RUN yum install -y sudo passwd openssh-server openssh-clients wget
 
 ##########################################################################
 # add epel repository
