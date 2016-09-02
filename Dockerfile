@@ -6,7 +6,7 @@ RUN yum update -y
 
 ##########################################################################
 # all yum installations here
-RUN yum install -y sudo passwd openssh-server openssh-clients wget tar screen crontabs strace telnet perl libpcap bc patch ntp dnsmasq
+RUN yum install -y sudo passwd openssh-server openssh-clients wget tar screen vixie-cron crontabs strace telnet perl libpcap bc patch ntp dnsmasq
 
 ##########################################################################
 # start sshd to generate host keys, patch sshd_config and enable yum repos
