@@ -1,4 +1,4 @@
-FROM centos:5.11
+FROM centos:5
 
 MAINTAINER zzzshanghai
 
