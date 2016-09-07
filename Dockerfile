@@ -28,6 +28,7 @@ RUN (mkdir -p /root/.ssh/; \
 # passwords 
 RUN echo "root:password" | chpasswd
 
-#EXPOSE 22
+EXPOSE 22
+EXPOSE 80
 
 CMD service crond start; /usr/sbin/sshd -D
