@@ -4,6 +4,7 @@ MAINTAINER zzzshanghai
 
 ##########################################################################
 # all yum updates here
+RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-*
 RUN yum update -y
 
 ##########################################################################
